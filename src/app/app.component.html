@@ -1,0 +1,48 @@
+<!-- <app-number-parent>
+
+</app-number-parent>
+
+<app-stopwatch-parent>
+    
+</app-stopwatch-parent> -->
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a routerLink="/number" routerLinkActive="active">Number</a>
+                    </li>
+                    <li>
+                        <a routerLink="/watch" routerLinkActive="active">Stop Watch</a>
+                    </li>
+                    <li>
+                        <a routerLink="/color" routerLinkActive="active">Color</a>
+                    </li>
+                    <li>
+                        <a routerLink="/theme" routerLinkActive="active">Theme</a>
+                    </li>
+                    <li>
+                        <a routerLink="/ui" routerLinkActive="active">UI Element</a>
+                    </li>
+                    <li>
+                        <a routerLink="/output" routerLinkActive="active">Output Parent Child Toggle Form</a>
+                    </li>
+                    <li>
+                        <a routerLink="/testvc" routerLinkActive="active">Test View Children</a>
+                    </li>
+                    <li>
+                        <a routerLink="/testcc" routerLinkActive="active">Person ContentChild/Children using Directive / Component</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<h3>ContentChild using Directive</h3>
+<app-writer>
+  <!-- <p appBook bookId="1" bookName="Java 8 Tutorials" *ngIf="latestBook"></p>
+  <p appBook bookId="2" bookName="Learning Angular 4" *ngIf="!latestBook"></p> -->
+  <!-- OR  -->
+  <appBook bookId="1" bookName="Java 8 Tutorials" *ngIf="latestBook"></appBook>
+  <appBook bookId="2" bookName="Learning Angular 4" *ngIf="!latestBook"></appBook>
+</app-writer>
+<br/>
+<button (click)="onChangeBook()">Change Book</button>
+<br/>
+
+<app-favourite-books>
+  <appBook bookId="1" bookName="Hibernate 4 Tutorials"></appBook>
+  <appBook bookId="2" bookName="Spring Boot Tutorials"></appBook>
+  <app-favourite-books>
+    <appBook bookId="3" bookName="Learning JavaScript"></appBook>
+  </app-favourite-books>
+  <app-favourite-books *ngIf="showAllBook">
+    <appBook bookId="4" bookName="Thymeleaf Tutorials"></appBook>
+    <appBook bookId="5" bookName="Android Tutorials"></appBook>
+  </app-favourite-books>
+</app-favourite-books>
+<br/>
+
+<button (click)="onShowAllBooks()">
+  <label *ngIf="!showAllBook">Show More</label>
+  <label *ngIf="showAllBook">Show Less</label>
+</button>
+<br/>
+<hr/>
+
+<h3>ContentChild using Component</h3>
+<app-address>
+  <app-city cityId="1" cityName="Varanasi" *ngIf="homeTown"></app-city>
+  <app-city cityId="2" cityName="Noida" *ngIf="!homeTown"></app-city>
+</app-address>
+<br/>
+
+<button (click)="onChangeCity()">Change City</button>
+<br/>
+
+<app-favourite-cities>
+  <app-city cityId="1" cityName="Noida"></app-city>
+  <app-city cityId="2" cityName="Mumbai"></app-city>
+  <app-favourite-cities>
+    <app-city cityId="3" cityName="Gurugram"></app-city>
+  </app-favourite-cities>
+  <app-favourite-cities *ngIf="showAllCity">
+    <app-city cityId="4" cityName="New Delhi"></app-city>
+    <app-city cityId="5" cityName="Bengaluru"></app-city>
+  </app-favourite-cities>
+</app-favourite-cities>
+<br/>
+
+<button (click)="onShowAllCities()">
+  <label *ngIf="!showAllCity">Show More</label>
+  <label *ngIf="showAllCity">Show Less</label>
+</button>
+<hr/>
+
+<h3>ContentChild using ElementRef</h3>
+<app-friend>
+  <div #name *ngIf="bestFriend">Mahesh</div>
+  <div #name *ngIf="!bestFriend">Krishna</div>
+</app-friend>
+<br/>
+<button (click)="onChangeFriend()">Change Friend</button>
+<br/>
+
+<app-favourite-friends>
+  <div #name>Mohit</div>
+  <div #name>Anup</div>
+  <div #name *ngIf="showAllFriend">Nilesh</div>
+  <div #name *ngIf="showAllFriend">Sravan</div>
+</app-favourite-friends>
+<br/>
+
+<button (click)="onShowAllFriends()">
+  <label *ngIf="!showAllFriend">Show More</label>
+  <label *ngIf="showAllFriend">Show Less</label>
+</button>

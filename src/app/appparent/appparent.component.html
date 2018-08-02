@@ -1,0 +1,12 @@
+<!-- <app-appchild></app-appchild> -->
+<!-- 
+<app-appchild (valueChange)='displayCounter($event)'></app-appchild> -->
+
+<app-appchild *ngIf="showForm===true" (toggleForm)="toggleForm(showForm)"></app-appchild>
+
+<div *ngIf="showForm === false">
+  <div class="col s3">
+    <button class="btn" (click)="toggleForm(showForm);">Show App Child Form</button>
+    Hello this is parent.
+  </div>
+</div>

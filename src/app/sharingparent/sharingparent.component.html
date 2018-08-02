@@ -1,0 +1,7 @@
+<h1>Hello {{message}}</h1>
+<br/>
+<app-sharingchild [greetMessage]="childmessage" *ngFor="let n of childNameArray" [Name]="n"></app-sharingchild>
+
+<!-- <appchild *ngFor="let n of childNameArray" 
+    [Name]="n">
+    </appchild> -->
