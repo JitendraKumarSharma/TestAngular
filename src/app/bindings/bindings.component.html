@@ -1,0 +1,51 @@
+<h2>Property Binding</h2>
+
+{{name}}
+
+<img src='{{imageDisplay}}' height='200' width='200' />
+<!-- OR  -->
+<img [src]='imageDisplay' height='200' width='200' />
+<!-- OR  -->
+<img bind-src='imageDisplay' height='200' width='200' />
+<br/> Uising curly braces
+<input type='text' value='{{ sayHello() }}' />
+<br/>
+<!-- OR  -->
+
+using square brackets:
+<input type='text' [value]='sayHello()' />
+<br/>
+<!-- OR  -->
+using bindvalue:
+<input type='text' bind-value='sayHello()' />
+<br/>
+
+<h2>Event Binding</h2>
+Click Check Console:
+<input type='text' [value]='MagnetBrains' (click)='showvalue($event)' />
+<br/> KeyUp Check Console:
+<input type='text' [value]='Magnet' (keyup)='onKeyup($event)' />
+<br/> KeyDown(Enter Key) Check Console:
+<input type='text' (keydown)="onKeydown($event)">
+<br/> Press ctrl and 1 key at the same time:
+<input type="text" (keyup.control.1)="onKeydown1($event)">
+<!-- Key Combinations
+   <input (keydown.enter)="...">
+<input (keydown.a)="...">
+<input (keydown.esc)="...">
+<input (keydown.shift.esc)="...">
+<input (keydown.control)="...">
+<input (keydown.alt)="...">
+<input (keydown.meta)="...">
+<input (keydown.9)="...">
+<input (keydown.tab)="...">
+<input (keydown.backspace)="...">
+<input (keydown.arrowup)="...">
+<input (keydown.shift.arrowdown)="...">
+<input (keydown.shift.control.z)="...">
+<input (keydown.f4)="..."> -->
+
+<h2>Two-Way Binding</h2>
+<input type='text' [(ngModel)]='showvalueinput' />
+<br/>
+<p>Show Value Of Input Box: {{ showvalueinput }}</p>

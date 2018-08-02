@@ -1,6 +1,6 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { NumberComponent } from './number/number.component';
 import { NumberParentComponent } from './number-parent/number-parent.component';
@@ -25,6 +25,9 @@ import { AddressComponent } from './address/address.component';
 import { FavouriteCitiesComponent } from './favourite-cities/favourite-cities.component';
 import { FriendComponent } from './friend/friend.component';
 import { FavouriteFriendsComponent } from './favourite-friends/favourite-friends.component';
+import { BindingsComponent } from './bindings/bindings.component';
+import { SharingchildComponent } from './sharingchild/sharingchild.component';
+import { SharingparentComponent } from './sharingparent/sharingparent.component';
 
 @NgModule({
   declarations: [
@@ -50,9 +53,13 @@ import { FavouriteFriendsComponent } from './favourite-friends/favourite-friends
     FavouriteCitiesComponent,
     FriendComponent,
     FavouriteFriendsComponent,
+    BindingsComponent,
+    SharingchildComponent,
+    SharingparentComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     //RouterModule,
     RouterModule.forRoot([
       {

@@ -9,6 +9,8 @@ import { UiElementComponent } from '../app/ui-element/ui-element.component';
 import { AppparentComponent } from '../app/appparent/appparent.component';
 import { TestvcParentComponent } from '../app/testvc-parent/testvc-parent.component';
 import { PersonComponent } from '../app/person/person.component';
+import { BindingsComponent } from '../app/bindings/bindings.component';
+import { SharingparentComponent } from '../app/sharingparent/sharingparent.component';
 
 let appRoutes: Routes = [
     { path: 'number', component: NumberParentComponent },
@@ -19,6 +21,8 @@ let appRoutes: Routes = [
     { path: 'output', component: AppparentComponent },
     { path: 'testvc', component: TestvcParentComponent },
     { path: 'testcc', component: PersonComponent },
+    { path: 'bindings', component: BindingsComponent },
+    { path: 'sharing', component: SharingparentComponent },
     { path: '', component: NumberParentComponent, pathMatch: 'full' } // redirect to home page on load
 ];
 
