@@ -12,6 +12,7 @@ import { PersonComponent } from '../app/person/person.component';
 import { BindingsComponent } from '../app/bindings/bindings.component';
 import { SharingparentComponent } from '../app/sharingparent/sharingparent.component';
 import { StructuralComponent } from '../app/structural/structural.component'
+import { PipesComponent } from '../app/pipes/pipes.component'
 
 let appRoutes: Routes = [
     { path: 'number', component: NumberParentComponent },
@@ -25,6 +26,7 @@ let appRoutes: Routes = [
     { path: 'bindings', component: BindingsComponent },
     { path: 'sharing', component: SharingparentComponent },
     { path: 'structure', component: StructuralComponent },
+    { path: 'pipes', component: PipesComponent },
     { path: '', component: NumberParentComponent, pathMatch: 'full' } // redirect to home page on load
 ];
 

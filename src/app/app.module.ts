@@ -29,6 +29,7 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { SharingchildComponent } from './sharingchild/sharingchild.component';
 import { SharingparentComponent } from './sharingparent/sharingparent.component';
 import { StructuralComponent } from './structural/structural.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { StructuralComponent } from './structural/structural.component';
     BindingsComponent,
     SharingchildComponent,
     SharingparentComponent,
-    StructuralComponent
+    StructuralComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
