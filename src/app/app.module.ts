@@ -28,6 +28,7 @@ import { FavouriteFriendsComponent } from './favourite-friends/favourite-friends
 import { BindingsComponent } from './bindings/bindings.component';
 import { SharingchildComponent } from './sharingchild/sharingchild.component';
 import { SharingparentComponent } from './sharingparent/sharingparent.component';
+import { StructuralComponent } from './structural/structural.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SharingparentComponent } from './sharingparent/sharingparent.component'
     FavouriteFriendsComponent,
     BindingsComponent,
     SharingchildComponent,
-    SharingparentComponent
+    SharingparentComponent,
+    StructuralComponent
   ],
   imports: [
     BrowserModule,

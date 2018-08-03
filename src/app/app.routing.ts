@@ -11,6 +11,7 @@ import { TestvcParentComponent } from '../app/testvc-parent/testvc-parent.compon
 import { PersonComponent } from '../app/person/person.component';
 import { BindingsComponent } from '../app/bindings/bindings.component';
 import { SharingparentComponent } from '../app/sharingparent/sharingparent.component';
+import { StructuralComponent } from '../app/structural/structural.component'
 
 let appRoutes: Routes = [
     { path: 'number', component: NumberParentComponent },
@@ -23,6 +24,7 @@ let appRoutes: Routes = [
     { path: 'testcc', component: PersonComponent },
     { path: 'bindings', component: BindingsComponent },
     { path: 'sharing', component: SharingparentComponent },
+    { path: 'structure', component: StructuralComponent },
     { path: '', component: NumberParentComponent, pathMatch: 'full' } // redirect to home page on load
 ];
 

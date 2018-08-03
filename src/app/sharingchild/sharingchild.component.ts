@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sharingchild',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SharingchildComponent implements OnInit {
 
+  @Output() returnvalue = new EventEmitter();
   @Input() greetMessage: string;
 
   _name: string;
@@ -30,4 +31,8 @@ export class SharingchildComponent implements OnInit {
     return this._name;
   }
 
+  Returnvalue()
+  {
+    this.returnvalue.emit('I am return from child');
+  }
 }

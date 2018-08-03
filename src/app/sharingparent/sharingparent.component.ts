@@ -10,12 +10,13 @@ export class SharingparentComponent implements OnInit {
 
   message: string = "I am Parent";
   childmessage: string = "I am passed from Parent to child component"
-  childNameArray = ['foo','koo',' ','moo','too','hoo',''];
+  childNameArray = ['foo', 'koo', ' ', 'moo', 'too', 'hoo', ''];
+  public msg: string;
   constructor() { }
 
   ngOnInit() {
 
   }
 
-  
+
 }
