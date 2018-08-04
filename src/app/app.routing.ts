@@ -13,6 +13,7 @@ import { BindingsComponent } from '../app/bindings/bindings.component';
 import { SharingparentComponent } from '../app/sharingparent/sharingparent.component';
 import { StructuralComponent } from '../app/structural/structural.component'
 import { PipesComponent } from '../app/pipes/pipes.component'
+import { EmployeeListComponent } from '../app/employee-list/employee-list.component'
 
 let appRoutes: Routes = [
     { path: 'number', component: NumberParentComponent },
@@ -27,7 +28,9 @@ let appRoutes: Routes = [
     { path: 'sharing', component: SharingparentComponent },
     { path: 'structure', component: StructuralComponent },
     { path: 'pipes', component: PipesComponent },
+    { path: 'employee', component: EmployeeListComponent },
     { path: '', component: NumberParentComponent, pathMatch: 'full' } // redirect to home page on load
 ];
 
 export let routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+

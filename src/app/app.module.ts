@@ -30,6 +30,9 @@ import { SharingchildComponent } from './sharingchild/sharingchild.component';
 import { SharingparentComponent } from './sharingparent/sharingparent.component';
 import { StructuralComponent } from './structural/structural.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeService } from './employee.service';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,8 @@ import { PipesComponent } from './pipes/pipes.component';
     SharingchildComponent,
     SharingparentComponent,
     StructuralComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
@@ -71,9 +75,10 @@ import { PipesComponent } from './pipes/pipes.component';
         component: NumberParentComponent
       }
     ]),
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
