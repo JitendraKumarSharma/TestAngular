@@ -1,4 +1,5 @@
 import { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NumberParentComponent } from '../app/number-parent/number-parent.component';
@@ -14,8 +15,16 @@ import { SharingparentComponent } from '../app/sharingparent/sharingparent.compo
 import { StructuralComponent } from '../app/structural/structural.component'
 import { PipesComponent } from '../app/pipes/pipes.component'
 import { EmployeeListComponent } from '../app/employee-list/employee-list.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
+
 
 let appRoutes: Routes = [
+    { path: '', redirectTo: '/number', pathMatch: 'full' },  // redirect to home page on load/ Default URL
+    //OR
+    //{ path: '', component: NumberParentComponent, pathMatch: 'full' },  // redirect to home page on load/ Default URL
     { path: 'number', component: NumberParentComponent },
     { path: 'watch', component: StopwatchParentComponent },
     { path: 'color', component: CpcolorParentComponent },
@@ -29,8 +38,34 @@ let appRoutes: Routes = [
     { path: 'structure', component: StructuralComponent },
     { path: 'pipes', component: PipesComponent },
     { path: 'employee', component: EmployeeListComponent },
-    { path: '', component: NumberParentComponent, pathMatch: 'full' } // redirect to home page on load
+    {
+        path: 'employee/:id',
+        component: EmployeeDetailComponent,
+        children: [
+            { path: 'overview', component: EmployeeOverviewComponent },
+            { path: 'contact', component: EmployeeContactComponent }
+        ]
+    },
+    { path: '**', component: PageNotFoundComponent } // must be at the bottom of every component
 ];
 
 export let routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+
+export const routingComponents = [
+    NumberParentComponent,
+    StopwatchParentComponent,
+    CpcolorParentComponent,
+    CpthemeComponent,
+    UiElementComponent,
+    AppparentComponent,
+    TestvcParentComponent,
+    PersonComponent,
+    BindingsComponent,
+    SharingparentComponent,
+    StructuralComponent,
+    PipesComponent,
+    EmployeeListComponent,
+    PageNotFoundComponent,
+    EmployeeDetailComponent
+];
 
