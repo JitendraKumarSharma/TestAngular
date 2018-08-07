@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild } from '@angular/core';
+import { Component, OnInit, ContentChild, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-person',
@@ -10,6 +10,10 @@ export class PersonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @HostListener('mouseover') onMouseOver() {
+    console.log('Hover');
   }
 
   latestBook = true;

@@ -14,4 +14,4 @@ export class CpColorDirective implements AfterViewInit {
   change(changedColor: String) {
     this.elRef.nativeElement.style.color = changedColor;
   }
-} 
+}
