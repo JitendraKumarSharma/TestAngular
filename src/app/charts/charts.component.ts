@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ExcelService } from '../services/excel.service';
+
+import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 
 @Component({
   selector: 'app-charts',
@@ -7,9 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private excelService: ExcelService) { }
+
+  data: any = [
+    { eid: 'e101', ename: 'ravi', esal: 1000 },
+    { eid: 'e102', ename: 'ram', esal: 2000 },
+    { eid: 'e103', ename: 'rajesh', esal: 3000 }
+  ];
+
+  exportAsXLSX(): void {
+    this.excelService.exportAsExcelFile(this.data, 'sample');
+    this.exportExcel();
+  }
+
+  data1 = [
+    { name: "Test 1", age: 13, average: 8.2, approved: true, description: "using 'Content here, content here' " },
+    { name: 'Test 2', age: 11, average: 8.2, approved: true, description: "using 'Content here, content here' " },
+    { name: 'Test 4', age: 10, average: 8.2, approved: true, description: "using 'Content here, content here' " },
+  ];
+
+  exportExcel() {
+    var options = {
+      headers: ["Name", "Age", "Average", "Approved", "Description"]
+    };
+    let cc = new Angular5Csv(this.data1, 'My Report', options);
+  }
+
 
   ngOnInit() {
+    this.exportExcel();
   }
 
   public barChartOptions: any = {
@@ -107,5 +136,7 @@ export class ChartsComponent implements OnInit {
 
     window.print();
   }
+
+
 
 }
