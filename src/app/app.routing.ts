@@ -19,7 +19,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
 import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
-
+import { ChartsComponent } from './charts/charts.component';
 
 let appRoutes: Routes = [
     { path: '', redirectTo: '/number', pathMatch: 'full' },  // redirect to home page on load/ Default URL
@@ -46,6 +46,7 @@ let appRoutes: Routes = [
             { path: 'contact', component: EmployeeContactComponent }
         ]
     },
+    { path: 'charts', component: ChartsComponent },
     { path: '**', component: PageNotFoundComponent } // must be at the bottom of every component
 ];
 

@@ -22,6 +22,8 @@ import { EmployeeService } from './employee.service';
 import { routing, routingComponents } from './app.routing';
 import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
 import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
+import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -43,13 +45,15 @@ import { EmployeeContactComponent } from './employee-contact/employee-contact.co
     routingComponents,
     EmployeeOverviewComponent,
     EmployeeContactComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
