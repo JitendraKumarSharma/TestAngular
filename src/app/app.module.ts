@@ -24,6 +24,14 @@ import { EmployeeOverviewComponent } from './employee-overview/employee-overview
 import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MaterialComponent } from './material/material.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule, MatCheckboxModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -46,9 +54,18 @@ import { ChartsModule } from 'ng2-charts';
     EmployeeOverviewComponent,
     EmployeeContactComponent,
     ChartsComponent,
+    MaterialComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    CdkTableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
     FormsModule,
     RouterModule,
     routing,

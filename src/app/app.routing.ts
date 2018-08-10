@@ -20,6 +20,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import { EmployeeOverviewComponent } from './employee-overview/employee-overview.component';
 import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 import { ChartsComponent } from './charts/charts.component';
+import { MaterialComponent } from './material/material.component';
 
 let appRoutes: Routes = [
     { path: '', redirectTo: '/number', pathMatch: 'full' },  // redirect to home page on load/ Default URL
@@ -47,6 +48,7 @@ let appRoutes: Routes = [
         ]
     },
     { path: 'charts', component: ChartsComponent },
+    { path: 'material', component: MaterialComponent },
     { path: '**', component: PageNotFoundComponent } // must be at the bottom of every component
 ];
 
@@ -67,6 +69,7 @@ export const routingComponents = [
     PipesComponent,
     EmployeeListComponent,
     PageNotFoundComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    MaterialComponent
 ];
 
