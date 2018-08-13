@@ -32,7 +32,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule, MatCheckboxModule } from '@angular/material';
-
+import { MatCardModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +54,7 @@ import { MatInputModule, MatCheckboxModule } from '@angular/material';
     EmployeeOverviewComponent,
     EmployeeContactComponent,
     ChartsComponent,
-    MaterialComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +66,7 @@ import { MatInputModule, MatCheckboxModule } from '@angular/material';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
+    MatCardModule,
     FormsModule,
     RouterModule,
     routing,

@@ -14,14 +14,44 @@ export class MaterialComponent implements OnInit {
   public dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
 
+  pageSizes = [5, 10, 20];
+  pageSize: number;
+  checked1 = false;
+  flag = 0;
+  tot = 0;
+  cnt = 0;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor() { }
 
+  yourEventHandler(event) {
+    this.pageSize = event.pageSize;
+    this.cnt = 0;
+    this.tot = 0;
+  }
+
+  getmsg(row) {
+    //console.log(row.name);
+    debugger
+    if (this.flag == 0) {
+      alert('hi');
+      return false;
+    }
+    else {
+      this.flag = 0;
+      return false;
+    }
+  }
+
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    var obj = {
+      pageSize: 5
+    }
+    this.yourEventHandler(obj);
   }
 
   applyFilter(filterValue: string) {
@@ -39,9 +69,19 @@ export class MaterialComponent implements OnInit {
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
   }
+ 
+  clac(n: number) {
+    if (this.cnt < this.pageSize && this.flag == 0) {
+      this.tot += n;
+      this.cnt += 1;
+    }
+    else {
+      this.flag = 0;
+    }
 
+  }
   getTotalCost() {
-    return ELEMENT_DATA.map(t => t.position).length;
+    return this.tot;
   }
 
 }
